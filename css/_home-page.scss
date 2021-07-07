@@ -4,16 +4,13 @@
 .banner {
     width: 100%;
     height: 100vh;
-    position: absolute;
-    top:0;
-    left:0;
-    background-color: #f2f2f2;
+    position: relative;
+    background-color: $black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    padding: 8rem 2rem;
+    padding: 0;
 
     .hero-video {
         position: absolute;
@@ -23,7 +20,7 @@
         height: 100%;
         video {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             position: absolute;
             object-fit: cover;
             top: 0;
@@ -45,10 +42,10 @@
             font-size: 1.5rem;
             letter-spacing: 4px;
             text-transform: uppercase;
-            background: -webkit-linear-gradient($black, $red, $yellow);
-            // background: linear-gradient(to right, $black 0%, $red 20%, $yellow 100%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            // background: -webkit-linear-gradient($black, $red, $yellow);
+            // // background: linear-gradient(to right, $black 0%, $red 20%, $yellow 100%);
+            // background-clip: text;
+            // -webkit-text-fill-color: transparent;
         }
     }
 
@@ -66,6 +63,49 @@
             padding: 1rem;
             border: 3px solid;
             border-image: linear-gradient($black, $red, $yellow) 1;
+        }
+    }
+}
+
+.makes {
+    background-color: $black;
+    text-align: center;
+    padding: 4rem 0;
+    .wrapper {
+        padding: 4rem 1.2rem;
+    }
+    h3{
+        margin: 1rem 0;
+    }
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .make{
+            position: relative;
+            margin-bottom: 1rem;
+            .bg {
+                // position: absolute;
+                // left:0;
+                // top:0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .car{
+                position: absolute;
+                left: 0;
+                top:0;
+
+            }
+            .text{
+                margin-top: -1.5rem;
+                // p{
+                //     font-size: 0.8rem;
+                // }
+            }
         }
     }
 }

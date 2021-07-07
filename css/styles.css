@@ -99,16 +99,25 @@ h6,
 p,
 a {
   font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  color: #f2f2f2;
 }
 
 h2 {
   font-size: 3rem;
-  text-transform: uppercase;
-  color: #f2f2f2;
 }
 @media (min-width: 700px) {
   h2 {
     font-size: 4rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+}
+@media (min-width: 700px) {
+  h3 {
+    font-size: 3rem;
   }
 }
 
@@ -142,6 +151,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   background-color: white;
+  overflow-x: hidden;
 }
 
 .lock {
@@ -150,11 +160,30 @@ body {
 
 header {
   background-color: transparent;
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 1;
 }
+header::after {
+  background: rgba(8, 9, 10, 0.8);
+  content: "";
+  width: 100%;
+  height: 0%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+header.scrolling::after {
+  height: 100%;
+}
 header .wrapper {
-  padding: 1rem;
+  padding: 1.2rem;
 }
 header .logo {
   width: 200px;
@@ -169,13 +198,11 @@ header #nav-icon {
   width: 40px;
   height: 30px;
   position: relative;
-  margin: 1rem;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  position: relative;
   z-index: 10;
 }
 header #nav-icon span {
@@ -261,7 +288,7 @@ header .mainnav .menu .current-menu-item a::after {
   display: inline-block;
   position: absolute;
   background-color: #fecf0d;
-  height: 2px;
+  height: 4px;
   top: 50%;
   left: -1.5rem;
   margin: auto;
@@ -277,10 +304,8 @@ header .mainnav .show-nav {
 .banner {
   width: 100%;
   height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #f2f2f2;
+  position: relative;
+  background-color: #08090a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,8 +319,7 @@ header .mainnav .show-nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
-  padding: 8rem 2rem;
+  padding: 0;
 }
 .banner .hero-video {
   position: absolute;
@@ -306,7 +330,7 @@ header .mainnav .show-nav {
 }
 .banner .hero-video video {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
@@ -328,10 +352,6 @@ header .mainnav .show-nav {
   font-size: 1.5rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  background: -webkit-linear-gradient(#08090a, #f21921, #fecf0d);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .banner .inquiry {
   position: relative;
@@ -349,5 +369,50 @@ header .mainnav .show-nav {
   -o-border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
      border-image: -webkit-gradient(linear, left top, left bottom, from(#08090a), color-stop(#f21921), to(#fecf0d)) 1;
      border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
+}
+
+.makes {
+  background-color: #08090a;
+  text-align: center;
+  padding: 4rem 0;
+}
+.makes .wrapper {
+  padding: 4rem 1.2rem;
+}
+.makes h3 {
+  margin: 1rem 0;
+}
+.makes .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.makes .gallery .make {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.makes .gallery .make .bg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.makes .gallery .make .car {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.makes .gallery .make .text {
+  margin-top: -1.5rem;
 }
 /*# sourceMappingURL=styles.css.map */

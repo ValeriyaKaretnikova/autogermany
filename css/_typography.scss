@@ -10,14 +10,21 @@ h6,
 p,
 a {
     font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    color: $off-white;
 }
 
 h2 {
     font-size: 3rem;
-    text-transform: uppercase;
-    color: $off-white;
     @include break(med) {
         font-size: 4rem;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+    @include break(med) {
+        font-size: 3rem;
     }
 }
 
