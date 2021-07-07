@@ -1,0 +1,28 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+h1, 
+h2,
+h3, 
+h4, 
+h5, 
+h6,
+p,
+a {
+    font-family: 'Lato', sans-serif;
+}
+
+h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: $off-white;
+    @include break(med) {
+        font-size: 4rem;
+    }
+}
+
+a {
+    font-size: 1rem;
+    text-decoration: none;
+
+}

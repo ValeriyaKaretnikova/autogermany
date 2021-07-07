@@ -1,0 +1,125 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+header {
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    .wrapper {
+        padding: 1rem;
+    }
+    .logo {
+        width: 200px;
+        height: auto;
+        @include break(med) {
+            width: 300px;
+        }
+    }
+    #nav-icon {
+        width: 40px;
+        height: 30px;
+        position: relative;
+        margin: 1rem;
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        position: relative;
+        z-index:10;
+        span {
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background-color: #f2f2f2;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: 0.25s ease-in-out;
+            &:nth-child(1) {
+                top: 0px;
+                transform-origin: left center;
+                background-color: $black;
+            }
+            &:nth-child(2) {
+                top: 12px;
+                transform-origin: left center;
+                background-color: $red;
+            }
+            &:nth-child(3) {
+                top: 24px;
+                transform-origin: left center;
+                background-color: $yellow;
+            }
+        }
+        &.open span {
+            &:nth-child(1) {
+                transform: rotate(45deg);
+                top: -2px;
+                left: 8px;
+                width: 80%;
+                background-color: $yellow;
+            }
+            &:nth-child(2) {
+                width: 0%;
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+                top: 21px;
+                left: 8px;
+                width: 80%;
+            }
+        }
+    }
+    .mainnav{
+        .menu {
+            visibility: hidden;
+            max-height: 100vh;
+            width:100%;
+            height:100%;
+            opacity: 0.95;
+            background-color: $black; 
+            position: fixed;
+            top: 0;
+            right: -100%;
+            z-index: 3;
+            transition: all 0.5s ease-in-out;
+            .menu-links {
+                width: 100%;
+                height: 100%;
+                padding: 4rem 2rem;
+                a {
+                    color: $off-white;
+                    line-height: 5rem;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                }
+            }
+            .current-menu-item {
+                position: relative;
+                a{
+                    &::after{
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        background-color: $yellow;
+                        height: 2px;
+                        top:50%;
+                        left:-1.5rem;
+                        margin: auto;
+                        transition: all 0.3s;
+                        width:20px;
+
+                    }
+                }
+            }
+        }
+        .show-nav {
+            visibility: visible;
+
+            right: 0;
+            
+        }
+    }
+}
+

@@ -1,0 +1,71 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8rem 2rem;
+
+    .hero-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        video {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    }
+
+    .text {
+        position: relative;
+        z-index: 0;
+        text-align: center;
+        h2 {
+            letter-spacing: 5px;
+            word-spacing: 10px;
+        }
+        p {
+            color: $yellow;
+            font-size: 1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            background: -webkit-linear-gradient($black, $red, $yellow);
+            // background: linear-gradient(to right, $black 0%, $red 20%, $yellow 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .inquiry {
+        position: relative;
+        z-index: 0;
+        text-align: center;
+        margin-top: 4rem;
+
+        a {
+            color: #f2f2f2;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 1rem;
+            border: 3px solid;
+            border-image: linear-gradient($black, $red, $yellow) 1;
+        }
+    }
+}

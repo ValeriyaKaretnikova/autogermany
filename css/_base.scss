@@ -1,0 +1,25 @@
+@use 'colors' as *;
+
+// Smooth scrolling
+html {
+    scroll-behavior: smooth;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container,
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+.lock {
+    overflow: hidden;
+}
