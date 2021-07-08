@@ -146,7 +146,7 @@
     display: inline-block;
     width: 10px;
     height: 10px;
-    background: #ccc;
+    background: #ddd;
     border-radius: 50%;
     margin: 3px;
     padding: 0;
@@ -156,10 +156,13 @@
 .splide__pagination__page.is-active {
     transform: scale(1.4);
     background: #fecf0d;
+
+
 }
 .splide__pagination__page:hover {
     cursor: pointer;
-    background: red;
+    background: #fecf0d;
+
 }
 .splide__pagination__page:focus {
     outline: none;

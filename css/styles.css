@@ -380,11 +380,10 @@ header .mainnav .show-nav {
   padding: 4rem 1.2rem;
 }
 .makes h3 {
-  margin: 0 1rem 4rem;
+  margin: 0 1rem 2rem;
 }
 .makes .gallery .make {
   position: relative;
-  margin-bottom: 1rem;
 }
 .makes .gallery .make .bg {
   width: 100%;
@@ -401,9 +400,13 @@ header .mainnav .show-nav {
   text-align: center;
 }
 .makes .gallery .make .text p {
-  letter-spacing: 3px;
-  font-family: "Lora", serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: bold;
   font-size: 1rem;
+}
+@media (min-width: 700px) {
+  .makes .gallery .make .text p {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

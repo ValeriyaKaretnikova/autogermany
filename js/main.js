@@ -26,16 +26,16 @@ window.addEventListener('load', function(e){
         type   : 'loop',
         autoplay: true,
         perPage: 1,
-	//     breakpoints: {
-	// 	'1200': {
-	// 		perPage: 2,
-	// 		gap    : '1rem',
-	// 	},
-	// 	'640': {
-	// 		perPage: 1,
-	// 		gap    : '1rem',
-	// 	},
-	// }
+        padding: "20rem",
+        // gap: "5rem",
+	    breakpoints: {
+		'1200': {
+            padding: "10rem",
+		},
+		'640': {
+            padding: 0
+		},
+	}
 
     } ).mount();
     

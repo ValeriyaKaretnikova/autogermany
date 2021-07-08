@@ -75,13 +75,12 @@
         padding: 4rem 1.2rem;
     }
     h3{
-        margin: 0 1rem 4rem;
+        margin: 0  1rem 2rem;
     }
     .gallery {
 
         .make{
             position: relative;
-            margin-bottom: 1rem;
             .bg {
                 width: 100%;
                 height: 100%;
@@ -94,12 +93,16 @@
             }
             .text {
                 text-align: center;
-                // margin-top: -1rem;
                 p{
-                    letter-spacing: 3px;
-                    font-family:'Lora', serif;
+                    font-family: 'Merriweather Sans', sans-serif;
                     font-weight: bold;
                     font-size: 1rem;
+
+                    @include break(med){
+                        font-size: 1.5rem;
+                    }
+                    
+                 
 
                 }
             }
