@@ -144,11 +144,11 @@
 }
 .splide__pagination__page {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background: #ddd;
     border-radius: 50%;
-    margin: 3px;
+    margin: 5px;
     padding: 0;
     transition: all 0.2s linear;
     border: none;
