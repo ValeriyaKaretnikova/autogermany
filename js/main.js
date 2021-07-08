@@ -1,8 +1,10 @@
+
+
 window.addEventListener('load', function(e){
     // Toggle Navigation
-    document.querySelector('#nav-icon').addEventListener('click', () => {
+    document.querySelector('.nav-icon').addEventListener('click', () => {
         document.querySelector('nav').classList.toggle('show-nav');
-        document.querySelector('#nav-icon').classList.toggle('open');
+        document.querySelector('.nav-icon').classList.toggle('open');
         document.body.classList.toggle('lock');
     });
 
@@ -18,4 +20,29 @@ window.addEventListener('load', function(e){
     
         }
     });
+
+    //Glider 
+    new Splide( '#splide', {
+        type   : 'loop',
+        autoplay: true,
+        perPage: 1,
+	//     breakpoints: {
+	// 	'1200': {
+	// 		perPage: 2,
+	// 		gap    : '1rem',
+	// 	},
+	// 	'640': {
+	// 		perPage: 1,
+	// 		gap    : '1rem',
+	// 	},
+	// }
+
+    } ).mount();
+    
+
+
+      
+    
+    
+    
 })

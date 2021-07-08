@@ -11,14 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&family=Playfair+Display+SC&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&family=Playfair+Display+SC&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="splide-2.4.21/dist/css/themes/splide-skyblue.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
+ 
     <script src="js/main.js" defer></script>
 </head>
 
@@ -33,7 +33,7 @@
                             <h1 class="sr-only">Autogermany Ltd.</h1>
                         </a>
                         <div class="menu-toggle">
-                            <div id="nav-icon">
+                            <div class="nav-icon">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -83,81 +83,91 @@
             <a href="#">Contact Us</a>
         </div>
     </div>
+
+    
     <section class="makes">
             <h3>Vehicles we service</h3>
-            <div class="gallery">
-                <div class="make">
-                    <div class="bg">
-                        <img src="img/makes/bg.jpg" alt="dark background">
-                    </div>
-                    <div class="car">
-                        <img src="img/makes/bmw.png" alt="bmw">
-                    </div>
-                    <div class="text">
-                        <p>BMW</p>
-                    </div>
+            <div id="splide" class="splide">
+                <div class="gallery splide__track">
+                    <ul class="splide__list">                  
+                        <li class="make splide__slide">
+                            <div class="text">
+                                <p>BMW</p>
+                            </div>
+                            <div class="bg">
+                                <img src="img/makes/bg.jpg" alt="dark background">
+                            </div>
+                            <div class="car">
+                                <img src="img/makes/bmw.png" alt="bmw">
+                            </div>
+                            
+                        </li>
+                        <li class="make splide__slide">
+                            <div class="text">
+                                <p>Mercedes</p>
+                            </div>
+                            <div class="bg">
+                                <img src="img/makes/bg.jpg" alt="dark background">
+                            </div>
+                            <div class="car">
+                                <img src="img/makes/mercedez-black.png" alt="mercedes">
+                            </div>
+                            
+                        </li>
+                        <li class="make splide__slide">
+                            <div class="text">
+                                <p>Audi</p>
+                            </div>
+                            <div class="bg">
+                                <img src="img/makes/bg.jpg" alt="dark background">
+                            </div>
+                            <div class="car">
+                                <img src="img/makes/audi.png" alt="audi">
+                            </div>
+                            
+                        </li>
+                        <li class="make splide__slide">
+                            <div class="text">
+                                <p>Mini</p>
+                            </div>
+                            <div class="bg">
+                                <img src="img/makes/bg.jpg" alt="dark background">
+                            </div>
+                            <div class="car">
+                                <img src="img/makes/mini.png" alt="mini">
+                            </div>
+                          
+                        </li>
+                        <li class="make splide__slide">
+                            <div class="text">
+                                <p>volkswagen</p>
+                             </div> 
+                            <div class="bg">
+                                <img src="img/makes/bg.jpg" alt="dark background">
+                            </div>
+                            <div class="car">
+                                <img src="img/makes/vw.png" alt="volkswagen">
+                            </div>
+                           
+                        </li>
+                        <li class="make splide__slide">
+                            <div class="text">
+                                <p>Mercedes Sprinter</p>
+                            </div>
+                            <div class="bg">
+                                <img src="img/makes/bg.jpg" alt="dark background">
+                            </div>
+                            <div class="car">
+                                <img src="img/makes/sprinter.png" alt="sprinter">
+                            </div>
+                           
+                        </li>
+                    </ul>
                 </div>
-                <div class="make">
-                    <div class="bg">
-                        <img src="img/makes/bg.jpg" alt="dark background">
-                    </div>
-                    <div class="car">
-                        <img src="img/makes/mercedez-black.png" alt="mercedes">
-                    </div>
-                    <div class="text">
-                        <p>Mercedes</p>
-                    </div>
-                </div>
-                <div class="make">
-                    <div class="bg">
-                        <img src="img/makes/bg.jpg" alt="dark background">
-                    </div>
-                    <div class="car">
-                        <img src="img/makes/audi.png" alt="audi">
-                    </div>
-                    <div class="text">
-                        <p>Audi</p>
-                    </div>
-                </div>
-                <div class="make">
-                    <div class="bg">
-                        <img src="img/makes/bg.jpg" alt="dark background">
-                    </div>
-                    <div class="car">
-                        <img src="img/makes/mini.png" alt="mini">
-                    </div>
-                    <div class="text">
-                        <p>Mini</p>
-                    </div>
-                </div>
-                <div class="make">
-                    <div class="bg">
-                        <img src="img/makes/bg.jpg" alt="dark background">
-                    </div>
-                    <div class="car">
-                        <img src="img/makes/vw.png" alt="volkswagen">
-                    </div>
-                    <div class="text">
-                        <p>volkswagen</p>
-                    </div>
-                </div>
-                <div class="make">
-                    <div class="bg">
-                        <img src="img/makes/bg.jpg" alt="dark background">
-                    </div>
-                    <div class="car">
-                        <img src="img/makes/sprinter.png" alt="sprinter">
-                    </div>
-                    <div class="text">
-                        <p>Mercedes Sprinter</p>
-                    </div>
-                </div>
-
             </div>
     </section>
 
-    
-
+<script src="splide-2.4.21/dist/js/splide.min.js"></script>
 </body>
 
 
