@@ -56,14 +56,14 @@
         margin-top: 4rem;
 
         a {
-            font-family: 'Lato', sans-serif;
+            font-family: "Lato", sans-serif;
             color: #f2f2f2;
             font-size: 1rem;
-            // letter-spacing: 2px;
             text-transform: uppercase;
             padding: 1rem;
             border: 3px solid;
             border-image: linear-gradient($black, $red, $yellow) 1;
+
         }
     }
 }
@@ -75,43 +75,41 @@
     .wrapper {
         padding: 4rem 1.2rem;
     }
-    h3{
-        margin: 0  1rem 2rem;
+    h4{
+        color: $yellow;
+    }
+    h3 {
+        margin: 0 1rem 2rem;
     }
     .gallery {
-
-        .make{
+        .make {
             position: relative;
             .bg {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-            .car{
+            .car {
                 position: absolute;
                 left: 0;
-                top:0;
+                top: 0;
             }
             .text {
                 text-align: center;
-                p{
-                    font-family: 'Merriweather Sans', sans-serif;
-text-transform: capitalize;
+                p {
+                    font-family: "Merriweather Sans", sans-serif;
+                    text-transform: capitalize;
                     // font-family: 'Lobster', cursive;
                     // font-family: 'Faster One', cursive;
                     // font-family: 'Codystar', cursive;
                     font-weight: bold;
                     font-size: 1rem;
 
-                    @include break(med){
+                    @include break(med) {
                         font-size: 1.5rem;
                     }
-                    
-                 
-
                 }
             }
-
         }
     }
 }
@@ -123,24 +121,38 @@ text-transform: capitalize;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    .wrapper{
-        padding:4rem 2rem;
-        h2 {
-            font-size: 2rem;
-            margin: 0  auto 1rem;
-
+    text-align: center;
+    .wrapper {
+        padding: 4rem 2rem;
+        @include break(med) {
+            padding: 4rem;
+            margin:0 auto;
+        }
+        @include break(wide) {
+            padding:  4rem 8rem;
+        }
+        @include break(exwide) {
+            padding:  4rem 12rem;
+        }
+        h3 {
+            margin: 0 auto 1rem;
         }
         h4 {
             color: $yellow;
+        }
+        p {
+            @include break(med) {
+                font-size: 1.2rem;
+            }
         }
         .inquiry {
             position: relative;
             z-index: 0;
             text-align: center;
             margin-top: 4rem;
-    
+
             a {
-                font-family: 'Lato', sans-serif;
+                font-family: "Lato", sans-serif;
                 color: #f2f2f2;
                 font-size: 1rem;
                 // letter-spacing: 2px;
@@ -149,8 +161,96 @@ text-transform: capitalize;
                 border: 3px solid;
                 border-image: linear-gradient($black, $red, $yellow) 1;
             }
-        }    
+        }
     }
-    
+}
 
+.services{
+    text-align: center;
+    background-image: url(../img/background/black-bg.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 50%;
+    @include break(med) {
+        background-size: 40%;
+      }
+      @include break(wide) {
+        background-size: 30%;
+      }
+
+
+    
+    .wrapper{
+        padding: 4rem 2rem;
+        h4 {
+            color:$yellow;
+        }
+        .gallery {
+            @include break(med) {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+            }
+          }
+        .service{
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgb(14,14,14);
+            // background: linear-gradient(45deg, rgba(14,14,14,1) 70%, rgba(242,25,33,1) 82%, rgba(254,207,2,1) 91%);
+            border-radius: 6px;
+            box-shadow: 0px 4px 6px $charcoal;
+            position: relative;
+            &::after{
+                content: "";
+                width: 100%;
+                height: 6px;
+                display: block;
+                position: absolute;
+                bottom:0;
+                left:0;
+                border-radius: 0 0 6px 6px;
+                background-image: linear-gradient($black, $red, $yellow);
+            }
+            
+            
+            p {
+                font-size: 1.5rem;
+                font-family: "Lato", sans-serif;
+            }
+            img {
+                width: 50%;
+                height: auto;
+                margin: 1rem auto;
+            }
+
+            @include break(med) {
+                width: 45%;
+                height: auto;
+                margin-right: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+              }
+              @include break(wide) {
+                width: 30%;
+              }
+            }
+        .inquiry {
+            position: relative;
+            z-index: 0;
+            text-align: center;
+            margin-top: 4rem;
+
+            a {
+                font-family: "Lato", sans-serif;
+                color: #f2f2f2;
+                font-size: 1rem;
+                text-transform: uppercase;
+                padding: 1rem;
+                border: 3px solid;
+                border-image: linear-gradient($black, $red, $yellow) 1;
+            }
+        }
+    }
 }
