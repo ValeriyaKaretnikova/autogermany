@@ -38,6 +38,20 @@ window.addEventListener('load', function(e){
 	}
 
     } ).mount();
+
+    new Splide( '#splideServices', {
+        type   : 'loop',
+        autoplay: true,
+        // perPage: 2,
+        gap: "1rem",
+        fixedWidth: '170px',
+        arrows: false,
+        pagination: false,
+        interval: 3500,
+        speed: 3500,
+        easing: 'linear'
+
+    } ).mount();
     
 
 
