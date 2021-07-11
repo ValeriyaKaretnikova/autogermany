@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="splide-2.4.21/dist/css/themes/splide-skyblue.min.css">
 
+    <link rel="stylesheet" href="MCDatepicker-master/dist/mc-calendar.min.css" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 
@@ -545,13 +546,35 @@
         <div class="wrapper">
             <h4>#autogermany</h4>
             <h3>We are on Social Media</h3>
-
         </div>
-            <div id="instafeed-container"></div>
+        <div id="instafeed-container"></div>
+    </section>
 
+    <section class="contact-us">
+        <div class="wrapper">
+            <h4>we want to hear from you</h4>
+            <h3>contact us</h3>
+
+            <form action="https://getform.io/f/3e11fb1f-4037-4d29-a8e3-60fcf1ec81fa" method="POST">
+
+                <input type="text" name="name" placeholder="Your Name *" required>
+                <input type="email" name="email" placeholder="Your Email *" required>
+                <input type="tel" name="phone" placeholder="Your Phone *" required>
+                <input type="text" name="vehicle" placeholder="Vehicle Information" required>
+                <div class="date">
+                    <input type="text" id="datepicker" placeholder="Date">
+                    <img src="img/icons/calendar2.png" alt="calendar icon">
+
+                </div>
+                <textarea name="appointment" id="message" placeholder="Appointment Reason *" rows="2" required></textarea>
+                <button type="submit" id="appointmentRequest">Request Appointment</button>
+
+            </form>
+        </div>
     </section>
 
     <script src="splide-2.4.21/dist/js/splide.min.js"></script>
+    <script src="MCDatepicker-master/dist/mc-calendar.min.js"></script>
 </body>
 
 

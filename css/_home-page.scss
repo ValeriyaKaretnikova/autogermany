@@ -147,7 +147,7 @@
 
 .services {
     text-align: center;
-    background-image: linear-gradient(rgba(8, 9, 10, 0.3), rgba(8, 9, 10, 0.1)), url(../img/background/sliderbg.jpg);
+    background-image: linear-gradient(rgba(8, 9, 10, 0.5), rgba(8, 9, 10, 0.3)), url(../img/background/sliderbg.jpg);
     background-position: center;
     background-size: cover;
     padding: 4rem 1rem;
@@ -162,7 +162,7 @@
             padding: 2rem 1rem;
             background: #171717;
             border-radius: 6px;
-            box-shadow: 0px 4px 6px $charcoal;
+            box-shadow: rgba(64, 66, 63) 0px 0px 4px;
             position: relative;
             // &::after{
             //     content: "";
@@ -181,13 +181,17 @@
                 height: 60px;
                 margin: 1rem auto 0;
                 fill: #f2f2f2;
+                @include break(wide) {
+                    width: 120px;
+                    height: 120px;
+                }
             }
         }
     }
 }
 
 .warranty {
-    background-image: linear-gradient(rgba(8, 9, 10, 0.85), rgba(8, 9, 10, 0.85)), url(../img/speedometer.jpg);
+    background-image: linear-gradient(rgba(8, 9, 10, 0.8), rgba(8, 9, 10, 0.8)), url(../img/speedometer.jpg);
     background-position: center;
     background-size: cover;
     @include break(wide) {
@@ -208,7 +212,6 @@
         }
     }
     .picture {
-        // width: 50%;
         max-width: 500px;
         margin: 0 auto;
     }
@@ -241,17 +244,20 @@
         overflow-y: hidden;
         overflow-x: scroll;
         scrollbar-width: none;
-        @include break(wide){
-        scrollbar-width: initial;
-        
+        @include break(wide) {
+            scrollbar-width: initial;
         }
     }
 
     .item {
-          position: relative;
-          flex: 0 0 160px;
-          height: 160px;
-          cursor: pointer;
+        position: relative;
+        flex: 0 0 160px;
+        height: 160px;
+        cursor: pointer;
+        @include break(wide) {
+            flex: 0 0 320px;
+            height: 320px;
+        }
         a {
             text-decoration: none;
             margin: 0;
@@ -259,7 +265,6 @@
             display: inline-block;
             width: 100%;
             height: 100%;
-           
         }
 
         img {
@@ -269,7 +274,89 @@
         }
     }
     padding-bottom: 4rem;
-    @include break(wide){
+    @include break(wide) {
         padding-top: 4rem;
+    }
+}
+
+.contact-us {
+    text-align: center;
+    background-image: linear-gradient(rgba(8, 9, 10, 0.7), rgba(8, 9, 10, 0.7)), url(../img/background/carbon.jpg);
+    background-position: center;
+    background-size: cover;
+    .wrapper {
+        padding: 4rem 2rem;
+        h4 {
+            color: $yellow;
+        }
+        h3 {
+            margin-bottom: 2rem;
+        }
+        form {
+            @include break(med) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                // flex: 0 0 45%;
+                * {
+                    flex: 0 0 48%;
+                }
+            }
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            background-color: transparent;
+            color: $off-white;
+            margin-bottom: 1rem;
+            border: none;
+            border-bottom: 1px solid $off-white;
+            padding: 0.5rem 0.3rem;
+
+            &:focus {
+                outline: none;
+                color: $yellow;
+                border-bottom: 1px solid $yellow;
+            }
+        }
+        textarea {
+            resize: vertical;
+            @include break(med) {
+                flex: 0 0 100%;
+            }
+        }
+        .date {
+            position: relative;
+            img {
+                position: absolute;
+                right: 0.5rem;
+                top: 0;
+                width: 32px;
+                height: auto;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        button {
+            position: relative;
+            z-index: 0;
+            text-align: center;
+            margin-top: 4rem;
+            background-color: transparent;
+            margin: 1rem auto;
+            color: #f2f2f2;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 1rem;
+            border: 3px solid;
+            border-image: linear-gradient($black, $red, $yellow) 1;
+            &:hover {
+                cursor: pointer;
+                color: $yellow;
+            }
+        }
     }
 }

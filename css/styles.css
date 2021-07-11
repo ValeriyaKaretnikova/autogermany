@@ -457,8 +457,8 @@ header .mainnav .show-nav {
 
 .services {
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 9, 10, 0.3)), to(rgba(8, 9, 10, 0.1))), url(../img/background/sliderbg.jpg);
-  background-image: linear-gradient(rgba(8, 9, 10, 0.3), rgba(8, 9, 10, 0.1)), url(../img/background/sliderbg.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 9, 10, 0.5)), to(rgba(8, 9, 10, 0.3))), url(../img/background/sliderbg.jpg);
+  background-image: linear-gradient(rgba(8, 9, 10, 0.5), rgba(8, 9, 10, 0.3)), url(../img/background/sliderbg.jpg);
   background-position: center;
   background-size: cover;
   padding: 4rem 1rem;
@@ -471,8 +471,8 @@ header .mainnav .show-nav {
   padding: 2rem 1rem;
   background: #171717;
   border-radius: 6px;
-  -webkit-box-shadow: 0px 4px 6px #40423f;
-          box-shadow: 0px 4px 6px #40423f;
+  -webkit-box-shadow: #40423f 0px 0px 4px;
+          box-shadow: #40423f 0px 0px 4px;
   position: relative;
 }
 .services .wrapper .service svg {
@@ -481,10 +481,16 @@ header .mainnav .show-nav {
   margin: 1rem auto 0;
   fill: #f2f2f2;
 }
+@media (min-width: 960px) {
+  .services .wrapper .service svg {
+    width: 120px;
+    height: 120px;
+  }
+}
 
 .warranty {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 9, 10, 0.85)), to(rgba(8, 9, 10, 0.85))), url(../img/speedometer.jpg);
-  background-image: linear-gradient(rgba(8, 9, 10, 0.85), rgba(8, 9, 10, 0.85)), url(../img/speedometer.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 9, 10, 0.8)), to(rgba(8, 9, 10, 0.8))), url(../img/speedometer.jpg);
+  background-image: linear-gradient(rgba(8, 9, 10, 0.8), rgba(8, 9, 10, 0.8)), url(../img/speedometer.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -568,6 +574,14 @@ header .mainnav .show-nav {
   height: 160px;
   cursor: pointer;
 }
+@media (min-width: 960px) {
+  .social .item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 320px;
+            flex: 0 0 320px;
+    height: 320px;
+  }
+}
 .social .item a {
   text-decoration: none;
   margin: 0;
@@ -586,5 +600,101 @@ header .mainnav .show-nav {
   .social {
     padding-top: 4rem;
   }
+}
+
+.contact-us {
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 9, 10, 0.7)), to(rgba(8, 9, 10, 0.7))), url(../img/background/carbon.jpg);
+  background-image: linear-gradient(rgba(8, 9, 10, 0.7), rgba(8, 9, 10, 0.7)), url(../img/background/carbon.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.contact-us .wrapper {
+  padding: 4rem 2rem;
+}
+.contact-us .wrapper h4 {
+  color: #fecf0d;
+}
+.contact-us .wrapper h3 {
+  margin-bottom: 2rem;
+}
+@media (min-width: 700px) {
+  .contact-us .wrapper form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contact-us .wrapper form * {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+  }
+}
+.contact-us .wrapper input,
+.contact-us .wrapper textarea {
+  width: 100%;
+  background-color: transparent;
+  color: #f2f2f2;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 0.5rem 0.3rem;
+}
+.contact-us .wrapper input:focus,
+.contact-us .wrapper textarea:focus {
+  outline: none;
+  color: #fecf0d;
+  border-bottom: 1px solid #fecf0d;
+}
+.contact-us .wrapper textarea {
+  resize: vertical;
+}
+@media (min-width: 700px) {
+  .contact-us .wrapper textarea {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+.contact-us .wrapper .date {
+  position: relative;
+}
+.contact-us .wrapper .date img {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  width: 32px;
+  height: auto;
+}
+.contact-us .wrapper .date img:hover {
+  cursor: pointer;
+}
+.contact-us .wrapper button {
+  position: relative;
+  z-index: 0;
+  text-align: center;
+  margin-top: 4rem;
+  background-color: transparent;
+  margin: 1rem auto;
+  color: #f2f2f2;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  border: 3px solid;
+  -o-border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
+     border-image: -webkit-gradient(linear, left top, left bottom, from(#08090a), color-stop(#f21921), to(#fecf0d)) 1;
+     border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
+}
+.contact-us .wrapper button:hover {
+  cursor: pointer;
+  color: #fecf0d;
 }
 /*# sourceMappingURL=styles.css.map */
