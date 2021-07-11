@@ -293,13 +293,15 @@
             margin-bottom: 2rem;
         }
         form {
+            max-width: 900px;
+            margin: 0 auto;
             @include break(med) {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 flex-wrap: wrap;
                 // flex: 0 0 45%;
-                * {
+                input {
                     flex: 0 0 48%;
                 }
             }
@@ -353,6 +355,7 @@
             padding: 1rem;
             border: 3px solid;
             border-image: linear-gradient($black, $red, $yellow) 1;
+            width: 200px;
             &:hover {
                 cursor: pointer;
                 color: $yellow;

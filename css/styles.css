@@ -618,6 +618,10 @@ header .mainnav .show-nav {
 .contact-us .wrapper h3 {
   margin-bottom: 2rem;
 }
+.contact-us .wrapper form {
+  max-width: 900px;
+  margin: 0 auto;
+}
 @media (min-width: 700px) {
   .contact-us .wrapper form {
     display: -webkit-box;
@@ -632,7 +636,7 @@ header .mainnav .show-nav {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .contact-us .wrapper form * {
+  .contact-us .wrapper form input {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 48%;
             flex: 0 0 48%;
@@ -692,6 +696,7 @@ header .mainnav .show-nav {
   -o-border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
      border-image: -webkit-gradient(linear, left top, left bottom, from(#08090a), color-stop(#f21921), to(#fecf0d)) 1;
      border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
+  width: 200px;
 }
 .contact-us .wrapper button:hover {
   cursor: pointer;
