@@ -1,0 +1,153 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+/*-------------------------------Footer--------------------------*/
+
+footer {
+    background-color: $darkgrey;
+    .wrapper {
+      padding: 0 1rem;
+      
+    }
+    .contacts {
+   
+    background: linear-gradient(rgba(8, 9, 10, 0.8), rgba(8, 9, 10, 0.8)),url("../img/background/pattern.jpg");
+      background-position: center;
+      background-size: cover;
+      padding: 1rem;
+      @include break(wide) {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+        }
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      img {
+          margin-right: 2rem;
+          @include break(wide) {
+              margin:0;
+          }
+      }
+
+      .separator {
+        width: 0.3rem;
+        height: 1.7rem;
+        background-color: $yellow;
+        margin-right: 2rem;
+        @include break(wide) {
+            margin: 0 1rem;
+        }
+    }
+  
+      .info-text p{
+          color: $light;
+          &:first-child {
+              color: white;
+              margin-bottom: 0.3rem;
+          }
+          &:last-child {
+              margin-top: 0;
+              font-size: 0.8rem;
+          }
+          a {
+              font-size: 0.8rem;
+          }
+      }
+      @include break(wide) {
+          justify-content: center;
+      } 
+  }
+  
+  .summary {
+      text-align: center;
+      margin: 3rem 0;
+      
+      @include break(med) {
+          text-align: left;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+  
+      p {
+        font-family: "Roboto", sans-serif;
+        font-size: 0.9rem;
+        color: $light;
+        margin-top: 2rem;
+        @include break(med){
+            margin-top: 0;
+            font-size: 1rem;
+        }
+      }
+      img {
+          max-width: 300px;
+          margin: 0 auto;
+          @include break(med) {
+              margin-right: 2rem;
+            }
+      }
+    }
+    
+    .dark-background {
+      background-color: $black;
+      .wrapper {
+        padding: 2rem 1rem;
+      }
+      .social-media {
+        text-align: center;
+        color: lightgrey;
+      }
+      .icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        a {
+          padding: 0.5rem 0.5rem 0.2rem;
+          border-radius: 3px;
+          background-color: $darkgrey;
+          transition: all 0.3s ease-in-out;
+          @include break(small) {
+              margin-right: 1.5rem;
+            }
+          &:hover {
+            background-color: $yellow;
+            svg {
+              fill: $darkgrey;
+            }
+          }
+        }
+        svg {
+          width: 30px;
+          height: 30px;
+          fill: $off-white;
+        }
+        @include break(small) {
+          justify-content: center;
+        }
+      }
+    }
+    .copyright {
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      font-size: 0.7rem;
+      margin-top: 4rem;
+      p {
+        color: $light;
+        margin: 0.5rem 0;
+        a {
+          font-size: 0.7rem;
+          background-color: $black;
+          padding: 0.2rem;
+          border-radius: 3px;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            color: $black;
+            background-color: $yellow;
+          }
+        }
+      }
+    }
+  }

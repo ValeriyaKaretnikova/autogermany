@@ -72,16 +72,8 @@ window.addEventListener('load', function(e){
         window.open(e.target.parentElement);
     });
 
-    //Form Date
-    const myDatePicker = MCDatepicker.create({ 
-        el: '#datepicker',
-        disableWeekends: true,
-        allowedYears: [2021,2022],
-        minDate: new Date(),
-        disableDates: [new Date(2021,11,25), new Date(2021,11,26), new Date(2022,11,25), new Date(2022,11,26)]
+    // Google map
 
-
-  })
 
 })
     
