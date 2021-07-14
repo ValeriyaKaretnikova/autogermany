@@ -72,7 +72,37 @@ window.addEventListener('load', function(e){
         window.open(e.target.parentElement);
     });
 
-    // Google map
+    // Testimonials
+    new Splide( '#testimonialsSplide', {
+        type   : 'loop',
+        autoplay: true,
+        perPage: 3,
+        gap: "1rem",
+        arrows: false,
+        fixedHeight: '30rem',
+
+        
+        breakpoints: {
+            960: {
+                perPage: 2,
+                fixedHeight: '30rem',
+            },
+            700: {
+                perPage: 1,
+                fixedHeight: '26rem'
+            },
+            540: {
+                perPage: 1,
+                fixedHeight: '28rem'
+            },
+            420: {
+                perPage: 1,
+                fixedHeight: '30rem'
+
+            }
+        }
+
+    } ).mount();
 
 
 })

@@ -352,12 +352,56 @@ header .mainnav .show-nav {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
+.banner .promotion {
+  position: absolute;
+  bottom: 3rem;
+  z-index: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.banner .promotion div:first-child {
+  margin-right: 3rem;
+}
+.banner .promotion h5 {
+  margin: 0;
+  text-transform: capitalize;
+}
+.banner .promotion span {
+  font-size: 1.2rem;
+  color: #fecf0d;
+}
+@media (min-width: 700px) {
+  .banner .promotion {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+@media (min-width: 960px) {
+  .banner .promotion {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+@media (min-width: 1140px) {
+  .banner .promotion {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
 .banner .inquiry {
   position: relative;
   z-index: 0;
   text-align: center;
-  margin-top: 4rem;
   width: 200px;
+  margin: 2rem auto;
 }
 .banner .inquiry a {
   color: #f2f2f2;
@@ -372,45 +416,7 @@ header .mainnav .show-nav {
   width: 100%;
 }
 
-.promotion {
-  max-width: 700px;
-  margin: 0 auto;
-}
-.promotion .wrapper {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(242, 25, 33, 0.8)), to(rgba(8, 9, 10, 0.8))), url(../img/mercedes-wheel.jpg);
-  background-image: linear-gradient(rgba(242, 25, 33, 0.8), rgba(8, 9, 10, 0.8)), url(../img/mercedes-wheel.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  padding: 4rem 1rem 2rem;
-  margin: 1rem;
-}
-.promotion .wrapper p {
-  margin: 2rem auto;
-}
-.promotion .wrapper .inquiry {
-  position: relative;
-  z-index: 0;
-  text-align: center;
-  margin: 4rem auto 0;
-  width: 200px;
-}
-.promotion .wrapper .inquiry a {
-  color: #f2f2f2;
-  font-size: 1rem;
-  text-transform: uppercase;
-  padding: 1rem;
-  border: 3px solid;
-  -o-border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
-     border-image: -webkit-gradient(linear, left top, left bottom, from(#08090a), color-stop(#f21921), to(#fecf0d)) 1;
-     border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
-  display: inline-block;
-  width: 100%;
-}
-
 .makes {
-  background-color: #08090a;
   text-align: center;
   padding: 4rem 0;
 }
@@ -506,8 +512,8 @@ header .mainnav .show-nav {
 
 .services {
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 9, 10, 0.4)), to(rgba(8, 9, 10, 0.7))), url(../img/background/sliderbg.jpg);
-  background-image: linear-gradient(rgba(8, 9, 10, 0.4), rgba(8, 9, 10, 0.7)), url(../img/background/sliderbg.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 19, 24, 0.7)), to(rgba(8, 9, 10, 0.9)));
+  background-image: linear-gradient(rgba(20, 19, 24, 0.7), rgba(8, 9, 10, 0.9));
   background-position: center;
   background-size: cover;
   padding: 4rem 1rem;
@@ -518,7 +524,7 @@ header .mainnav .show-nav {
 .services .wrapper .service {
   margin: 2rem auto;
   padding: 2rem 1rem;
-  background: #101010;
+  background: #08090a;
   border-radius: 6px;
   -webkit-box-shadow: #40423f 0px 0px 4px;
           box-shadow: #40423f 0px 0px 4px;
@@ -564,7 +570,7 @@ header .mainnav .show-nav {
   display: block;
 }
 .warranty .picture {
-  max-width: 350px;
+  max-width: 400px;
   margin: 0 auto;
   border: none;
 }
@@ -590,6 +596,83 @@ header .mainnav .show-nav {
         -ms-flex: 0 0 40%;
             flex: 0 0 40%;
   }
+}
+
+.testimonials {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 19, 24, 0.7)), to(rgba(8, 9, 10, 0.9)));
+  background-image: linear-gradient(rgba(20, 19, 24, 0.7), rgba(8, 9, 10, 0.9));
+  text-align: center;
+}
+.testimonials .wrapper {
+  padding: 4rem 1rem;
+}
+.testimonials .wrapper h4 {
+  color: #fecf0d;
+}
+.testimonials .testimonial {
+  background-color: #141318;
+  padding: 2rem 1rem;
+  z-index: 100;
+  position: relative;
+  color: #bbb;
+  margin: 2rem auto 0;
+  border-radius: 5px;
+  height: 26rem;
+}
+@media (min-width: 420px) {
+  .testimonials .testimonial {
+    height: 23.5rem;
+  }
+}
+@media (min-width: 540px) {
+  .testimonials .testimonial {
+    height: 21rem;
+  }
+}
+@media (min-width: 700px) {
+  .testimonials .testimonial {
+    height: 25rem;
+  }
+}
+@media (min-width: 960px) {
+  .testimonials .testimonial {
+    height: 26rem;
+  }
+}
+.testimonials .testimonial .svg-wrapper {
+  background-color: #fecf0d;
+  padding: 0.7rem 0.8rem 0.5rem;
+  display: inline-block;
+  border-radius: 10px;
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+}
+.testimonials .testimonial .svg-wrapper svg {
+  width: 30px;
+  height: 30px;
+  fill: #f2f2f2;
+}
+.testimonials .testimonial .stars {
+  font-size: 2.5rem;
+  color: #FFD700;
+}
+.testimonials .testimonial h5 {
+  font-weight: 900;
+}
+.testimonials .testimonial .author {
+  font-weight: bold;
+  margin-top: 2rem;
+}
+.testimonials .testimonial .review {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.testimonials .splide__arrow--prev {
+  left: 0;
+}
+.testimonials .splide__arrow--next {
+  right: 0;
 }
 
 .social {
@@ -655,8 +738,8 @@ header .mainnav .show-nav {
 
 .contact-us {
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 9, 10, 0.7)), to(rgba(8, 9, 10, 0.7))), url(../img/background/carbon.jpg);
-  background-image: linear-gradient(rgba(8, 9, 10, 0.7), rgba(8, 9, 10, 0.7)), url(../img/background/carbon.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 9, 10, 0.9)), to(rgba(8, 9, 10, 0.9))), url(../img/mercedes-wheel.jpg);
+  background-image: linear-gradient(rgba(8, 9, 10, 0.9), rgba(8, 9, 10, 0.9)), url(../img/mercedes-wheel.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -755,6 +838,7 @@ header .mainnav .show-nav {
 }
 
 .map {
+  background-color: #141318;
   text-align: center;
 }
 .map .wrapper {
@@ -785,8 +869,8 @@ footer .wrapper {
   padding: 0 1rem;
 }
 footer .contacts {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 9, 10, 0.8)), to(rgba(8, 9, 10, 0.8))), url("../img/background/absorber.jpg");
-  background: linear-gradient(rgba(8, 9, 10, 0.8), rgba(8, 9, 10, 0.8)), url("../img/background/absorber.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 19, 24, 0.4)), to(rgba(8, 9, 10, 0.4))), url("../img/background/sliderbg.jpg");
+  background: linear-gradient(rgba(20, 19, 24, 0.4), rgba(8, 9, 10, 0.4)), url("../img/background/sliderbg.jpg");
   background-position: center;
   background-size: cover;
   padding: 1rem;
