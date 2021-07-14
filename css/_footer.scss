@@ -114,6 +114,15 @@ footer {
           @include break(small) {
               margin-right: 1.5rem;
             }
+            @include break(med) {
+              margin-right: 2rem;
+            }
+            @include break(wide) {
+              margin-right: 2.5rem;
+            }
+            @include break(exwide) {
+              margin-right: 3rem;
+            }
           &:hover {
             background-color: $yellow;
             svg {

@@ -77,7 +77,7 @@ window.addEventListener('load', function(e){
         type   : 'loop',
         autoplay: true,
         perPage: 3,
-        gap: "1rem",
+        // gap: "1rem",
         arrows: false,
         fixedHeight: '30rem',
 
