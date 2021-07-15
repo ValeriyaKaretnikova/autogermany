@@ -429,6 +429,26 @@ header .mainnav .show-nav {
      border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
   display: inline-block;
   width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.banner .inquiry a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#08090a), color-stop(#f21921), to(#fecf0d));
+  background: linear-gradient(#08090a, #f21921, #fecf0d);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  z-index: -1;
+}
+.banner .inquiry a:hover::before {
+  height: 100%;
+  opacity: 1;
 }
 
 .makes {
@@ -489,6 +509,7 @@ header .mainnav .show-nav {
 }
 .about .wrapper {
   padding: 4rem 1rem;
+  margin: 0 auto;
 }
 .about .wrapper .text {
   max-width: 750px;
@@ -512,7 +533,8 @@ header .mainnav .show-nav {
   position: relative;
   z-index: 0;
   text-align: center;
-  margin-top: 4rem;
+  margin: 4rem auto 0;
+  width: 250px;
 }
 .about .wrapper .inquiry a {
   color: #f2f2f2;
@@ -523,6 +545,30 @@ header .mainnav .show-nav {
   -o-border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
      border-image: -webkit-gradient(linear, left top, left bottom, from(#08090a), color-stop(#f21921), to(#fecf0d)) 1;
      border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.about .wrapper .inquiry::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#08090a), color-stop(#f21921), to(#fecf0d));
+  background: linear-gradient(#08090a, #f21921, #fecf0d);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  z-index: -1;
+}
+.about .wrapper .inquiry:hover {
+  cursor: pointer;
+}
+.about .wrapper .inquiry:hover::before {
+  height: 100%;
+  opacity: 1;
 }
 
 .services {
@@ -674,7 +720,7 @@ header .mainnav .show-nav {
 }
 .testimonials .testimonial .stars {
   font-size: 2.5rem;
-  color: #FFD700;
+  color: #ffd700;
 }
 .testimonials .testimonial h5 {
   font-weight: 900;
@@ -851,9 +897,26 @@ header .mainnav .show-nav {
      border-image: linear-gradient(#08090a, #f21921, #fecf0d) 1;
   width: 200px;
 }
+.contact-us .wrapper button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#08090a), color-stop(#f21921), to(#fecf0d));
+  background: linear-gradient(#08090a, #f21921, #fecf0d);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  z-index: -1;
+}
 .contact-us .wrapper button:hover {
   cursor: pointer;
-  color: #fecf0d;
+}
+.contact-us .wrapper button:hover::before {
+  height: 100%;
+  opacity: 1;
 }
 
 .map {
