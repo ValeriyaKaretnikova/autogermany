@@ -8,6 +8,17 @@ window.addEventListener('load', function(e){
         document.body.classList.toggle('lock');
     });
 
+    const menuLinks = document.querySelectorAll('.menu-links li a');
+    menuLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            if (document.querySelector('nav').classList.contains('show-nav')) {
+                document.querySelector('nav').classList.remove('show-nav');
+                document.querySelector('.nav-icon').classList.remove('open');
+                document.body.classList.remove('lock');
+            }
+        })
+    })
+
     // Sticky 
     document.addEventListener('scroll', ()=>{
 
@@ -60,7 +71,7 @@ window.addEventListener('load', function(e){
         resolution: 'low_resolution',
         limit: 15,
         template: '<div class="item"><a href="{{link}}" target="_blank"><img alt="{{caption}}"src="{{image}}" /></a></div>',
-        accessToken: 'IGQVJYRFc0cTdJdm9iemJIS0REOWszNmphdnRYMVNXa0ZArbGxDcnZAmTUlGcC1POGtySGNzM2x0TGoxTXZA0WWZA0X0dXN0lmSkduREZAtd1loYW5ISERna3dWSGhnQWdQR3ZAvWDh0M2tod1oyQVQxUTFuQwZDZD'
+        accessToken: 'IGQVJWWUN3cW9PTTBjaUoxYjRQcVBjdlI0ZAmVlSVNmbkJuX0pFTVdkdlN0TTJoN0w2WG1vQ2EyYi1DYTJ1dXJhQkZAfTHVkSC1mdTFHLVUtXy1aQ2ExVVd6RWJWeEp5OWdqQUh2emkwalNib0UteF8zYgZDZD'
     });
 
     userFeed.run();

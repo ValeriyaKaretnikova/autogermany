@@ -268,7 +268,7 @@ header .mainnav .menu {
   position: fixed;
   top: 0;
   right: -100%;
-  z-index: 3;
+  z-index: 5;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -463,6 +463,10 @@ header .mainnav .show-nav {
 }
 .makes h3 {
   margin: 0 1rem 2rem;
+}
+.makes .gallery {
+  position: relative;
+  z-index: -1;
 }
 .makes .gallery .make {
   position: relative;
@@ -681,8 +685,18 @@ header .mainnav .show-nav {
   margin: 2rem 0.5rem 0;
   border-radius: 5px;
   height: 26rem;
-  -webkit-box-shadow: 0px 0px 4px #40423f;
-          box-shadow: 0px 0px 4px #40423f;
+  -webkit-box-shadow: 0px 0px 8px #40423f;
+          box-shadow: 0px 0px 8px #40423f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media (min-width: 420px) {
   .testimonials .testimonial {
@@ -941,6 +955,14 @@ header .mainnav .show-nav {
   .map .wrapper iframe {
     width: 97.5%;
   }
+}
+
+.splide__pagination {
+  z-index: 0;
+}
+
+.splide__arrow {
+  z-index: 0;
 }
 
 /*-------------------------------Footer--------------------------*/
