@@ -34,7 +34,7 @@ window.addEventListener('load', function (e) {
 
         postsCollection.appendChild(post);
 
-        document.querySelectorAll('.post').forEach((post) => {
+        document.querySelectorAll('.post .btnMore').forEach((post) => {
             post.addEventListener('click', readMore);
         })
     }
@@ -59,7 +59,7 @@ window.addEventListener('load', function (e) {
     getPosts();
 
     function readMore(e) {
-        const element = e.currentTarget;
+        const element = e.currentTarget.parentElement;
         var dots = element.querySelector(".dots");
         var moreText = element.querySelector(".more");
         var btnText = element.querySelector('.btnMore');

@@ -1175,6 +1175,10 @@ footer .copyright p a:hover {
   display: none;
 }
 
+.dots {
+  display: none;
+}
+
 .blog-banner {
   width: 100%;
   height: 100vh;
