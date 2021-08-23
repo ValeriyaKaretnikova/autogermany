@@ -353,6 +353,11 @@ header .mainnav .menu .current-menu-item a::after {
     visibility: hidden;
   }
 }
+@media (min-width: 960px) {
+  header .mainnav .menu .current-menu-item a {
+    color: #fecf0d;
+  }
+}
 header .mainnav .show-nav {
   visibility: visible;
   right: 0;
@@ -1264,11 +1269,14 @@ footer .copyright p a:hover {
           justify-content: center;
   padding: 10%;
   background-color: #08090a;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 9, 10, 0.5)), to(rgba(8, 9, 10, 0.5))), url(../img/blog-banner.jpg);
-  background-image: linear-gradient(rgba(8, 9, 10, 0.5), rgba(8, 9, 10, 0.5)), url(../img/blog-banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (min-width: 960px) {
+  .blog-banner {
+    background-attachment: fixed;
+  }
 }
 .blog-banner .text {
   position: relative;
@@ -1321,7 +1329,6 @@ footer .copyright p a:hover {
 }
 
 #postsCollection {
-  margin: 3rem 0.5rem;
   padding: 1rem;
   background-color: #141318;
   text-align: left;
@@ -1339,8 +1346,8 @@ footer .copyright p a:hover {
 }
 #postsCollection .post {
   margin: 2rem auto;
-  -webkit-box-shadow: #40423f 0px 6px 12px -2px, #40423f 0px 3px 7px -3px;
-          box-shadow: #40423f 0px 6px 12px -2px, #40423f 0px 3px 7px -3px;
+  -webkit-box-shadow: #4b4b4b 0px 6px 12px -2px, #4b4b4b 0px 3px 7px -3px;
+          box-shadow: #4b4b4b 0px 6px 12px -2px, #4b4b4b 0px 3px 7px -3px;
   padding: 1rem 2rem;
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -1370,8 +1377,28 @@ footer .copyright p a:hover {
   width: 150px;
   background-color: transparent;
   margin: 1rem auto;
+  position: relative;
+  z-index: 0;
+}
+#postsCollection .btnMore::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#08090a), color-stop(#f21921), to(#fecf0d));
+  background: linear-gradient(#08090a, #f21921, #fecf0d);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  z-index: -1;
 }
 #postsCollection .btnMore:hover {
   cursor: pointer;
+}
+#postsCollection .btnMore:hover::before {
+  height: 100%;
+  opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */

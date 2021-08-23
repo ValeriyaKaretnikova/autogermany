@@ -103,6 +103,32 @@ window.addEventListener('load', function (e) {
             document.querySelector('header').classList.remove('scrolling');
         }
     });
+
+
+    //Banner Carousel
+
+    let images = ['blog-banner.jpg', 'audi-yellow.jpg', 'mercedes-w.jpg', 'bmw-red.jpg', 'audi-light.jpg', 'mercedes-int.jpg'];
+let currentImg = 0;
+
+// add a variable to track the context of the interval 
+let slideshowInterval;
+
+//call the setInterval function to begin the slideshow 
+slideshowInterval = setInterval(function () { 
+    currentImg += 1; 
+    if (currentImg == images.length) { 
+        currentImg = 0; 
+    } 
+    updateSlide(currentImg) 
+}, 3000);
+
+document.querySelector('.blog-banner').style.backgroundImage = "linear-gradient(rgba(8, 9, 10, 0.8), rgba(8, 9, 10, 0.8)),url(../img/blog/" + images[0] + ')';
+
+function updateSlide(index) {
+    // display the new current image
+    document.querySelector('.blog-banner').style.backgroundImage = "linear-gradient(rgba(8, 9, 10, 0.8), rgba(8, 9, 10, 0.8)),url(../img/blog/" + images[index] + ')';
+  
+}
 })
 
 

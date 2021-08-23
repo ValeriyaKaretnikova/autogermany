@@ -115,16 +115,53 @@ window.addEventListener('load', function(e){
 
     } ).mount();
 
+    //Current active menu item
+    const aboutLinkPos = document.querySelector('#about').offsetTop;
+    const servicesLinkPos = document.querySelector('#splideServices').offsetTop;
+    const messageLinkPos = document.querySelector('#contactForm').offsetTop;
+    const contactsLinkPos = document.querySelector('#contacts').offsetTop;
 
+    window.addEventListener('scroll', function() {
+        const scrollPos  = window.scrollY + 1;
+  
+        if (scrollPos < aboutLinkPos){
+            removeCurrentMenuItem();
+            document.querySelector('#homeLink').classList.add('current-menu-item');
+        }
+        else if (scrollPos >= aboutLinkPos && scrollPos < servicesLinkPos){
+            removeCurrentMenuItem();
+            document.querySelector('#aboutLink').classList.add('current-menu-item');
+        }
+        else if (scrollPos >= servicesLinkPos && scrollPos < messageLinkPos){
+            removeCurrentMenuItem();
+            document.querySelector('#servicesLink').classList.add('current-menu-item');
+        }
+        else if (scrollPos >=messageLinkPos && scrollPos < contactsLinkPos) {
+            removeCurrentMenuItem();
+            document.querySelector('#messageLink').classList.add('current-menu-item');
+        }
+        else {
+            removeCurrentMenuItem();
+            document.querySelector('#contactsLink').classList.add('current-menu-item');
+        }
+    })
 
+    function removeCurrentMenuItem() {
+        const links = document.querySelectorAll('.menu-links li');
+        links.forEach((link) => {
+            if (link.classList.contains('current-menu-item')){
+                link.classList.remove('current-menu-item');
+            }
 
+        })
+    }
 
+    
 
 })
     
 
 
-      
-    
-    
+
+
     
