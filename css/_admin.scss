@@ -1,0 +1,135 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+.admin-header {
+    position: static;
+}
+
+.admin-page {
+    background-image: linear-gradient(rgba(8, 9, 10, 0.8), rgba(8, 9, 10, 0.8)), url("../img/blog/gear-close.jpg");
+    background-color: $black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.authentification {
+    margin: 10% auto;
+    padding: 0 10%;
+    text-align: center;
+    width: 100%;
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    form input {
+        display: block;
+        width: 100%;
+        margin: 2rem 0;
+        padding: 0.5rem;
+        border-radius: 5px;
+        border-color: transparent;
+    }
+    button {
+        background-color: transparent;
+        color: $light;
+        margin: 0 auto;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 0.5rem;
+        border: 3px solid;
+        border-image: linear-gradient($black, $red, $yellow) 1;
+        display: inline-block;
+        width: 200px;
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            height: 0;
+            background: linear-gradient($black, $red, $yellow);
+            width: 101%;
+            opacity: 0;
+            transition: all 0.2s ease-out;
+            z-index: -1;
+        }
+        &:hover {
+            &::before {
+                height: 105%;
+                opacity: 1;
+            }
+        }
+    }
+    .error {
+        margin: 0 auto 2rem;
+        text-align: left;
+        color: $red;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+
+.createPost {
+    margin: 10% auto;
+    padding: 0 10%;
+    text-align: center;
+    width: 100%;
+    legend {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        text-align: left;
+        font-family: 'Lato', sans-serif;
+    }
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        input, textarea {
+            display: block;
+            width: 100%;
+            margin: 2rem 0;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border-color: transparent;
+        }
+        textarea {
+            resize: vertical;
+        }
+    }
+    button {
+        background-color: transparent;
+        color: $light;
+        margin: 0 auto;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 0.5rem;
+        border: 3px solid;
+        border-image: linear-gradient($black, $red, $yellow) 1;
+        display: inline-block;
+        width: 200px;
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            height: 0;
+            background: linear-gradient($black, $red, $yellow);
+            width: 101%;
+            opacity: 0;
+            transition: all 0.2s ease-out;
+            z-index: -1;
+        }
+        &:hover {
+            &::before {
+                height: 105%;
+                opacity: 1;
+            }
+        }
+    }
+
+}

@@ -1,16 +1,16 @@
 window.addEventListener('load', function (e) {
     // Blog
-    var firebaseConfig = {
-        apiKey: "AIzaSyCCWAV8nUbacWsPC8pDW2iKB8CSnUphcC0",
-        authDomain: "autogermany.firebaseapp.com",
-        projectId: "autogermany",
-        storageBucket: "autogermany.appspot.com",
-        messagingSenderId: "149762891722",
-        appId: "1:149762891722:web:cc18021e7fae8c83723933",
-        measurementId: "G-YCLSQMLZCE"
-    };
+    // var firebaseConfig = {
+    //     apiKey: "AIzaSyCCWAV8nUbacWsPC8pDW2iKB8CSnUphcC0",
+    //     authDomain: "autogermany.firebaseapp.com",
+    //     projectId: "autogermany",
+    //     storageBucket: "autogermany.appspot.com",
+    //     messagingSenderId: "149762891722",
+    //     appId: "1:149762891722:web:cc18021e7fae8c83723933",
+    //     measurementId: "G-YCLSQMLZCE"
+    // };
 
-    firebase.initializeApp(firebaseConfig);
+    // firebase.initializeApp(firebaseConfig);
 
     let postsCollection = document.querySelector("#postsCollection");
 
@@ -43,6 +43,7 @@ window.addEventListener('load', function (e) {
     function getPosts() {
         db.collection("posts").get().then(snapshot => {
             snapshot.docs.forEach(docs => {
+               
                 createPost(
                     docs.data().postName,
                     docs.data().createdAt,
@@ -108,27 +109,27 @@ window.addEventListener('load', function (e) {
     //Banner Carousel
 
     let images = ['blog-banner.jpg', 'audi-yellow.jpg', 'mercedes-w.jpg', 'bmw-red.jpg', 'audi-light.jpg', 'mercedes-int.jpg'];
-let currentImg = 0;
+    let currentImg = 0;
 
-// add a variable to track the context of the interval 
-let slideshowInterval;
+    // add a variable to track the context of the interval 
+    let slideshowInterval;
 
-//call the setInterval function to begin the slideshow 
-slideshowInterval = setInterval(function () { 
-    currentImg += 1; 
-    if (currentImg == images.length) { 
-        currentImg = 0; 
-    } 
-    updateSlide(currentImg) 
-}, 3000);
+    //call the setInterval function to begin the slideshow 
+    slideshowInterval = setInterval(function () {
+        currentImg += 1;
+        if (currentImg == images.length) {
+            currentImg = 0;
+        }
+        updateSlide(currentImg)
+    }, 3000);
 
-document.querySelector('.blog-banner').style.backgroundImage = "linear-gradient(rgba(8, 9, 10, 0.8), rgba(8, 9, 10, 0.8)),url(../img/blog/" + images[0] + ')';
+    document.querySelector('.blog-banner').style.backgroundImage = "linear-gradient(rgba(8, 9, 10, 0.8), rgba(8, 9, 10, 0.8)),url(../img/blog/" + images[0] + ')';
 
-function updateSlide(index) {
-    // display the new current image
-    document.querySelector('.blog-banner').style.backgroundImage = "linear-gradient(rgba(8, 9, 10, 0.8), rgba(8, 9, 10, 0.8)),url(../img/blog/" + images[index] + ')';
-  
-}
+    function updateSlide(index) {
+        // display the new current image
+        document.querySelector('.blog-banner').style.backgroundImage = "linear-gradient(rgba(8, 9, 10, 0.8), rgba(8, 9, 10, 0.8)),url(../img/blog/" + images[index] + ')';
+
+    }
 })
 
 

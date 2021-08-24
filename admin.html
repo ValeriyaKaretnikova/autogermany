@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body class="admin-page">
+
+    <header class="admin-header">
+        <div class="wrapper">
+            <div class="navigation">
+                <div class="mainnav flex">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.svg" alt="Autogermany Logo">
+                        <h1 class="sr-only">Autogermany Ltd.</h1>
+                    </a>
+                    <div class="menu-toggle">
+                        <div class="nav-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <nav class="menu">
+                        <ul class="menu-links">
+                            <li id="homeLink">
+                                <a href="index.html">Home</a>
+                            </li>
+
+                            <li id="logInLink" class="current-menu-item">
+                                <a href="#">LOG IN</a>
+                            </li>
+                            
+                            <li id="logOutLink">
+                                <a href="#">LOG OUT</a>
+                            </li>
+                         
+                            <li>
+                                <a href="blog.html">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Login Form -->
+    <div class="authentification">
+        <form id="loginForm" action="POST">
+            <input type="text" name="login" id="login-email"placeholder="Login" autocomplete="login" required>
+            <input type="password" name="password" id="login-password" placeholder="Password" autocomplete="current-password" required>
+            <p class="error hide">Invalid Login or Password</p>
+            <button type="submit">LOG IN</button>
+        </form>
+    </div>
+
+    <!-- Create Post Form -->
+    <div class="createPost hide">
+        <form action="POST" id="createPostForm">
+            <legend>Add New Post</legend>
+            <input type="text" name="title" id="title" placeholder="Title" autocomplete="title" required>
+            <input type="date" name="date" id="date" placeholder="Date" autocomplete="current-date" required>
+            <input type="text" name="author" id="author" placeholder="Author" autocomplete="author" required>
+            <input type="text" name="summary" id="summary" placeholder="First Sentence" required>
+            <textarea name="main-content" id="content" rows="10" placeholder="Enter text here..."></textarea>
+            <button type="submit" id="createPostBtn">Create Post</button>
+        </form>
+    </div>
+  
+    
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

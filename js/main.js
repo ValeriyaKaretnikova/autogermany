@@ -152,12 +152,8 @@ window.addEventListener('load', function(e){
             if (link.classList.contains('current-menu-item')){
                 link.classList.remove('current-menu-item');
             }
-
         })
     }
-
-    
-
 })
     
 
