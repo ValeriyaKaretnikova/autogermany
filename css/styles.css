@@ -1480,7 +1480,6 @@ footer .copyright p a:hover {
 }
 
 .createPost {
-  margin: 10% auto;
   padding: 0 10%;
   text-align: center;
   width: 100%;
@@ -1490,6 +1489,7 @@ footer .copyright p a:hover {
   font-size: 1.5rem;
   text-align: left;
   font-family: "Lato", sans-serif;
+  margin-bottom: 1rem;
 }
 .createPost form {
   max-width: 500px;
@@ -1505,6 +1505,13 @@ footer .copyright p a:hover {
 }
 .createPost form textarea {
   resize: vertical;
+}
+.createPost form input[type=file] {
+  margin-top: 0;
+}
+.createPost form progress {
+  text-align: left;
+  width: 100%;
 }
 .createPost button {
   background-color: transparent;

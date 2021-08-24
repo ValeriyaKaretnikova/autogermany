@@ -41,7 +41,7 @@ window.addEventListener('load', function (e) {
 
     //Get Posts
     function getPosts() {
-        db.collection("posts").get().then(snapshot => {
+        db.collection("posts").orderBy('createdAt', 'desc').get().then(snapshot => {
             snapshot.docs.forEach(docs => {
                
                 createPost(

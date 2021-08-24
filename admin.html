@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
+
 <body class="admin-page">
 
     <header class="admin-header">
@@ -44,11 +46,11 @@
                             <li id="logInLink" class="current-menu-item">
                                 <a href="#">LOG IN</a>
                             </li>
-                            
+
                             <li id="logOutLink">
                                 <a href="#">LOG OUT</a>
                             </li>
-                         
+
                             <li>
                                 <a href="blog.html">Blog</a>
                             </li>
@@ -62,8 +64,9 @@
     <!-- Admin Login Form -->
     <div class="authentification">
         <form id="loginForm" action="POST">
-            <input type="text" name="login" id="login-email"placeholder="Login" autocomplete="login" required>
-            <input type="password" name="password" id="login-password" placeholder="Password" autocomplete="current-password" required>
+            <input type="text" name="login" id="login-email" placeholder="Login" autocomplete="login" required>
+            <input type="password" name="password" id="login-password" placeholder="Password"
+                autocomplete="current-password" required>
             <p class="error hide">Invalid Login or Password</p>
             <button type="submit">LOG IN</button>
         </form>
@@ -73,6 +76,8 @@
     <div class="createPost hide">
         <form action="POST" id="createPostForm">
             <legend>Add New Post</legend>
+            <!-- <progress value="0" max="100" id="uploader">0%</progress> -->
+            <input type="file" id="pictureBtn" name="post-picture" accept="image/png, image/jpeg, image/jpg">
             <input type="text" name="title" id="title" placeholder="Title" autocomplete="title" required>
             <input type="date" name="date" id="date" placeholder="Date" autocomplete="current-date" required>
             <input type="text" name="author" id="author" placeholder="Author" autocomplete="author" required>
@@ -81,12 +86,15 @@
             <button type="submit" id="createPostBtn">Create Post</button>
         </form>
     </div>
-  
-    
+
+
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
     <script src="../js/firebase.js"></script>
     <script src="../js/admin.js"></script>
 </body>
+
 </html>
