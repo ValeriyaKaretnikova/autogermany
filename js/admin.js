@@ -35,10 +35,7 @@ window.addEventListener('load', function(e){
         }
     })
     // Picture
-
-    const uploader = document.querySelector('#uploader');
     let fileUrl = null;
-
     document.querySelector('#pictureBtn').addEventListener('change', async(e) => {
         //Get file
         const file = e.target.files[0];
@@ -46,29 +43,14 @@ window.addEventListener('load', function(e){
         //Create a storage ref
         const storageRef = firebase.storage().ref('post1/' + file.name);
 
-        //Upload file
-        const task = await storageRef.put(file)
+        //Upload file   
+        await storageRef.put(file)
 
         //File URL
         fileUrl = await storageRef.getDownloadURL();
-        // console.log(fileUrl);
-        
-        // //Update progress bar
-        // task.on('state_changed', 
-
-        // function progress(snapshot) {
-        //     const percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        //     uploader.value = percentage;
-        // },
-
-        // function error(err) {
-        //     console.log(err.message);
-        // },
-
-        // function complete() {})
     })
-    //Create Post
     
+    //Create Post
     const createPost = document.querySelector('#createPostForm');
     createPost.addEventListener('submit', (e) => {
         e.preventDefault();
