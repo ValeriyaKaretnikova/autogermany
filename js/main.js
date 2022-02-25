@@ -71,7 +71,7 @@ window.addEventListener('load', function(e){
         resolution: 'low_resolution',
         limit: 15,
         template: '<div class="item"><a href="{{link}}" target="_blank"><img alt="{{caption}}"src="{{image}}" /></a></div>',
-        accessToken: 'IGQVJWWUN3cW9PTTBjaUoxYjRQcVBjdlI0ZAmVlSVNmbkJuX0pFTVdkdlN0TTJoN0w2WG1vQ2EyYi1DYTJ1dXJhQkZAfTHVkSC1mdTFHLVUtXy1aQ2ExVVd6RWJWeEp5OWdqQUh2emkwalNib0UteF8zYgZDZD'
+        accessToken: 'IGQVJXWTFjakk1NnVYSGwwRjhFeElhRFhaV205clNZAaVY1aDN5VmRtem4wSWRPekprUnFNRnYza211c1BpZA2RxczUxV3hqaTVqT1JWdm1vYXFJNDRlNzNIOWdSSVZAxOUhvUHU3M29Fb2JDTkY2NVdUWgZDZD'
     });
 
     userFeed.run();
